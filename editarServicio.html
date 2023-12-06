@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Editar servicio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+<style>
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 400px;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: rgb(239, 239, 239);
+        box-shadow: 0 0 10px #000;
+    }
+
+    /* Estilos generales para el formulario */
+    form {
+
+        margin: 0 auto;
+    }
+
+    /* Estilos para los elementos del formulario */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    /* Estilos para los botones */
+    .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    /* Estilos adicionales */
+    .form-text {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    /* Añade estilos específicos para el contorno del input en estado de foco */
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+</style>
+
+<body>
+
+    <body onload="editarServicio()">
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre Usuario</label>
+                    <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp"
+                        placeholder="Ingrese Nombre">
+                    <small id="nombreHelp" class="form-text text-muted"><br></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">fecha</label>
+                    <input type="text" class="form-control" id="fecha" aria-describedby="fechaHelp"
+                        placeholder="Ingrese fecha">
+                    <small id="fechaHelp" class="form-text text-muted"><br></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Seleccionar categoria</label>
+                    <select id="categoria" class="form-control">
+                        <option value="">Seleccione el categoria</option>
+                        <option value="Admin">educacion</option>
+                        <option value="Usuario">Apoyo economico</option>
+                    </select>
+                    <small id="fechaHelp" class="form-text text-muted"><br></small>
+                </div>
+                <div class="form-group">
+                    <labelservicio for="informacion">Informacion </labelservicio>
+                    <input type="text" class="form-control" id="informacion" aria-describedby="informacionHelp"
+                        placeholder="Ingrese informacion">
+                    <small id="informacionHelp" class="form-text text-muted"><br></small>
+                </div>
+
+                <div class="form-group">
+                    <labelservicio for="requisitos">Requisitos </labelservicio>
+                    <input type="text" class="form-control" id="requisitos" aria-describedby="requisitosHelp"
+                        placeholder="Ingrese Requisitos">
+                    <small id="requisitosHelp" class="form-text text-muted"><br></small>
+                </div>
+                <div class="form-group">
+                    <label for="estado">Seleccionar Estado</label>
+                    <select id="estado" class="form-control">
+                        <option value="">Seleccione el Estado</option>
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                    </select>
+                    <small id="estadoHelp" class="form-text text-muted"><br></small>
+                </div>
+                <div class="form-group">
+                    <label for="preciodolar">Precio dólar</label>
+                    <input type="text" class="form-control" id="preciodolar" aria-describedby="preciodolarHelp"
+                        placeholder="precio del dólar">
+                    <small id="preciodolarHelp" class="form-text text-muted"><br></small>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="btnActualizar">Actualizar</button>
+
+                <a href="listarServicio.html "><button type="button" class="btn btn-danger"
+                        id="btnCancelar">Cancelar</button></a>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="js/funciones.js">
+
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
